@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="./cache.js"></script>
+    <script>
+      const a = 123
+      localCache.setCache('a', 123)
+      console.log(localCache.getCache('a'))
+      const c = 123
+      localCache.setCache('e', 123)
+      console.log(localCache.getCache('e'))
+      const d = 123
+      localCache.setCache('f', 123)
+      console.log(localCache.getCache('f'))
+    </script>
+  </body>
+</html>
