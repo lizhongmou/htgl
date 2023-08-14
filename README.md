@@ -1,6 +1,6 @@
 # v3
 
-This template should help get you started developing with Vue 3 in Vite.
+这个使用的是vue3加vite构建的
 
 ## Recommended IDE Setup
 
