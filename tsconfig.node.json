@@ -1,0 +1,21 @@
+// 这个ssr 服务器端渲染的作用美？
+// 这个是基于打包的配置？
+{
+  // 继承自，一些公用的样式进行了封装，node环境配置了相关的方法
+  "extends": "@tsconfig/node18/tsconfig.json",
+  "include": [
+    // 下面这些都是一些基于 node的打包工具？
+    // 还是说基于下面这些文件给的编译选项
+    "vite.config.*",
+    "vitest.config.*",
+    "cypress.config.*",
+    "nightwatch.conf.*",
+    "playwright.config.*"
+  ],
+  "compilerOptions": {
+    "composite": false, // 对于引用项目必须设置该属性
+    "module": "ESNext", // 使用 ES Module 格式打包编译后的文件
+    "types": ["node"],
+    "allowSyntheticDefaultImports": true // 允许使用 import 导入使用 export = 导出的默认内容
+  }
+}

@@ -1,0 +1,23 @@
+// 这个是基于日常使用的配置文件？
+{
+  // 继承自，一些公用的样式进行了封装，隐藏了起来
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  // 数组类型，include 用于表示 ts 管理的文件。
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "auto-imports.d.ts", "components.d.ts", "src/**/*.d.ts", ],
+  // exclude用于表示 ts 排除的文件(即不被编译的文件)。
+  //   其中的文件列表可以使用 glob 匹配模式列表，支持的glob通配符有：
+  // * 匹配0或多个字符（不包括目录分隔符） ? 匹配一个任意字符（不包括目录分隔符） **/ 递归匹配任意子目录
+  "exclude": ["src/**/__tests__/*"],
+  //
+  "compilerOptions": {
+    "types": ["element-plus/global.d.ts"],
+    // 如果这里的值为 false，是不是意味这个里面的不能合成到tsconfig.json里面去
+    "composite": true,
+    // 别名，在vscode使用时友好提示。vscode读取
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"] // vscode读取
+    },
+    "noImplicitAny": false
+  }
+}
